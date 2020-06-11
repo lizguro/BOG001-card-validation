@@ -14,6 +14,9 @@ btnValidate.onclick = function(){
     
     let result=validator.isValid(num);
     console.log(result);
+
+    let mask=validator.maskify(nCard);
+    console.log(mask);
 }
 
 

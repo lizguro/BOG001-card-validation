@@ -51,6 +51,14 @@ const validator = {
     },
     sum: (total, num) => {
         return total + num;
+    },
+    maskify: num => {
+
+        let lastDigit = num.slice(-4);
+        let mask_simbol = "*";
+        let masked_str = mask_simbol.repeat(num.length-4) + lastDigit;
+
+        return num = masked_str;
     }
 }
 
