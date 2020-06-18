@@ -2,10 +2,58 @@ import validator from './validator.js';
 
 console.log(validator);
 
+let btnBuy = document.getElementsByClassName("btnBuy");
 let numberCard = document.getElementById("card");
 let btnValidate = document.getElementById ("vCard");
+const card = document.querySelector('#tarjeta');
+const formulario = document.querySelector("#formulario-tarjeta");
+const yearActual = new Date().getFullYear();
+const numeroTarjeta = document.querySelector('#tarjeta .numero');
+const nombreTarjeta = document.querySelector('#tarjeta .nombre');
+
+document.getElementById("shop").style.display="block";
+document.getElementById("pre-order").style.display="none";
+document.getElementById("nameCard").style.display ="none";
+document.getElementById("dateCard").style.display ="none";
+document.getElementById("invalid").style.display ="none";
 
 
+//TOMA TODAS LAS CLASES DE LOS BOTONE COMPRA Y EJECUTA UNA FUNCION
+for ( let i=0; i < btnBuy.length; i++){
+       
+    btnBuy[i].addEventListener("click", flip);
+}
+
+function flip(event) {
+    document.getElementById("shop").style.display="none";
+    document.getElementById("pre-order").style.display="block";
+}
+
+//SE REALIZAN FUNCIONALIDADES DE LA TARJETA(DIBUJO)
+ 
+//rotar la tarjeta
+card.addEventListener('click', () => {
+    card.classList.toggle('active');
+});
+
+// * Select del mes generado dinamicamente.
+for (let i = 1; i <= 12; i++){
+	let opcion = document.createElement('option');
+	opcion.value = i;
+    opcion.innerText = i;
+    formulario.selectMes.appendChild(opcion);
+}
+
+// * Select del año generado dinamicamente.
+for(let i = yearActual; i <= yearActual + 8; i++){
+	let opcion = document.createElement('option');
+	opcion.value = i;
+	opcion.innerText = i;
+	formulario.selectYear.appendChild(opcion);
+}
+
+
+//FUNCION QUE REALIZA TODO LO RELACIONADO CON LA VALIDACIÓN Y MASKIFY DE LA TARJETA (llama a validator.js)
 btnValidate.onclick = function(){
 
     let nCard= numberCard.value;
@@ -13,15 +61,22 @@ btnValidate.onclick = function(){
     let num = Array.from(nCard);
     
     let result=validator.isValid(num);
-    console.log(result);
-
+    
     let mask=validator.maskify(nCard);
     console.log(mask);
+
+    if (result == true){
+        document.getElementById("nameCard").style.display ="block";
+        document.getElementById("dateCard").style.display ="block";
+    }else{
+        document.getElementById("maskify").innerHTML = mask;
+        document.getElementById("invalid").style.display ="block";
+    }
 }
 
 
    
-    /* otra forma de hacer entero un numero dentro de de un array
+/* otra forma de hacer entero un numero dentro de de un array
     let multipleNumbers = num;
     let multipleNumbers2 = multipleNumbers.map(multiple);
     
@@ -32,6 +87,6 @@ btnValidate.onclick = function(){
             return parseInt(value);
         }
         
-    } */
+} */
 
 
