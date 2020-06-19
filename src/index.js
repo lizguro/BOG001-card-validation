@@ -1,15 +1,12 @@
 import validator from './validator.js';
 
-console.log(validator);
-
 let btnBuy = document.getElementsByClassName("btnBuy");
 let numberCard = document.getElementById("card");
 let btnValidate = document.getElementById ("vCard");
 const card = document.querySelector('#tarjeta');
 const formulario = document.querySelector("#formulario-tarjeta");
 const yearActual = new Date().getFullYear();
-const numeroTarjeta = document.querySelector('#tarjeta .numero');
-const nombreTarjeta = document.querySelector('#tarjeta .nombre');
+
 
 document.getElementById("shop").style.display="block";
 document.getElementById("pre-order").style.display="none";
@@ -24,7 +21,7 @@ for ( let i=0; i < btnBuy.length; i++){
     btnBuy[i].addEventListener("click", flip);
 }
 
-function flip(event) {
+function flip() {
     document.getElementById("shop").style.display="none";
     document.getElementById("pre-order").style.display="block";
 }
@@ -59,18 +56,21 @@ btnValidate.onclick = function(){
     let nCard= numberCard.value;
 
     let num = Array.from(nCard);
+    num.reverse();
     
     let result=validator.isValid(num);
     
     let mask=validator.maskify(nCard);
-    console.log(mask);
-
+    
     if (result == true){
         document.getElementById("nameCard").style.display ="block";
         document.getElementById("dateCard").style.display ="block";
+        document.getElementById("invalid").style.display ="none";
     }else{
         document.getElementById("maskify").innerHTML = mask;
         document.getElementById("invalid").style.display ="block";
+        document.getElementById("nameCard").style.display ="none";
+        document.getElementById("dateCard").style.display ="none";
     }
 }
 

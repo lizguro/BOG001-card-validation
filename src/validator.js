@@ -2,18 +2,17 @@ const validator = {
 
     isValid: num => {
 
-        num.reverse();
-
         let arrayNCard = [];
+        let multiplicar = 0;
 
         for (let i = 0; i < num.length; i++) {
 
             const entero = parseInt(num[i]);
             arrayNCard.push(entero);
-
+            
             if (validator.espar(i) == true) {
 
-                let multiplicar = arrayNCard[i] * 2;
+                multiplicar = arrayNCard[i] * 2;
 
                 if (multiplicar > 9) {
 
@@ -28,13 +27,13 @@ const validator = {
                 }
 
             } else {
-                let multiplicar = arrayNCard[i] * 1;
+                multiplicar = arrayNCard[i];
             }
 
         }
 
-        let suma = arrayNCard.reduce(validator.sum);
-
+        let suma = arrayNCard.reduce(validator.sum,0);
+       
         if (suma % 10 == 0) {
             return num = true;
         } else {
@@ -54,11 +53,14 @@ const validator = {
     },
     maskify: num => {
 
-        let lastDigit = num.slice(-4);
         let mask_simbol = "*";
-        let masked_str = mask_simbol.repeat(num.length-4) + lastDigit;
-
-        return num = masked_str;
+        if (num.length >= 4){
+            let lastDigit = num.slice(-4);
+            let masked_str = mask_simbol.repeat(num.length-4) + lastDigit;
+            return num = masked_str;
+        }else{
+            return num;
+        }        
     }
 }
 
