@@ -10,6 +10,8 @@ let numeroTarjeta = document.querySelector('#tarjeta .numero');
 let nombreTarjeta = document.querySelector('#tarjeta .nombre');
 let mesExpiración = document.querySelector("#tarjeta .mes");
 let añoExpiración = document.querySelector("#tarjeta .year");
+let ccv = document.querySelector('#tarjeta .ccv');
+let firma = document.querySelector('#tarjeta .firma p');
 
 
 document.getElementById("shop").style.display="block";
@@ -58,8 +60,10 @@ for(let i = yearActual; i <= yearActual + 8; i++){
 formulario.card.addEventListener("keyup", (e) =>{
     let inputValue = e.target.value;
     formulario.card.value = inputValue;
+    
 
     numeroTarjeta.textContent = inputValue;
+    
     if (inputValue == ""){
         numeroTarjeta.textContent = "#### #### #### ####";
 
@@ -70,6 +74,7 @@ formulario.inputNombre.addEventListener("keyup", (e) => {
     let inputValue = e.target.value;
     formulario.inputNombre.value = inputValue;
     nombre.textContent = inputValue;
+    firma.textContent = inputValue;
 
     if (inputValue == ""){
         nombre.textContent = "JHON DOE";
@@ -85,7 +90,20 @@ formulario.selectYear.addEventListener("change", (e) => {
         añoExpiración.textContent = e.target.value;
         });
 
+// * CCV
+formulario.inputCCV.addEventListener('keyup', () => {
+	if(!tarjeta.classList.contains('active')){
+		tarjeta.classList.toggle('active');
+	}
 
+	formulario.inputCCV.value = formulario.inputCCV.value
+	// Eliminar los espacios
+	.replace(/\s/g, '')
+	// Eliminar las letras
+	.replace(/\D/g, '');
+
+	ccv.textContent = formulario.inputCCV.value;
+});
 
 
         

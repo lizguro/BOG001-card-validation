@@ -380,26 +380,25 @@ div > span {
 }
 
 .trasera .datos #firma .firma p {
-	line-height: 20px;
+	line-height: 40px;
 	font-family: 'Liu Jian Mao Cao', cursive;
 	color: #000;
-	font-size: 20px;
-	padding: 0 10px;
+	font-size: 25px;
+	padding: 0 30px;
 	text-transform: capitalize;
 }
 
 .trasera .datos #ccv {
     width: 80px;
     
-    
 }
 
 .trasera .datos #ccv .ccv {
 	background: #fff;
-    height: 10px;
     color: #000;
-	padding: 35px 1px 1px 1px;
-	text-align: center;
+	padding-top: 23px;
+    text-align: center;
+    min-height: 25px;
 }
 
 .trasera .leyenda {
