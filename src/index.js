@@ -6,6 +6,10 @@ let btnValidate = document.getElementById ("vCard");
 const card = document.querySelector('#tarjeta');
 const formulario = document.querySelector("#formulario-tarjeta");
 const yearActual = new Date().getFullYear();
+let numeroTarjeta = document.querySelector('#tarjeta .numero');
+let nombreTarjeta = document.querySelector('#tarjeta .nombre');
+let mesExpiración = document.querySelector("#tarjeta .mes");
+let añoExpiración = document.querySelector("#tarjeta .year");
 
 
 document.getElementById("shop").style.display="block";
@@ -46,10 +50,45 @@ for(let i = yearActual; i <= yearActual + 8; i++){
 	let opcion = document.createElement('option');
 	opcion.value = i;
 	opcion.innerText = i;
-	formulario.selectYear.appendChild(opcion);
+    formulario.selectYear.appendChild(opcion);
 }
 
+// INPUT NÚMERO DE TARJETA DELANTERA
 
+formulario.card.addEventListener("keyup", (e) =>{
+    let inputValue = e.target.value;
+    formulario.card.value = inputValue;
+
+    numeroTarjeta.textContent = inputValue;
+    if (inputValue == ""){
+        numeroTarjeta.textContent = "#### #### #### ####";
+
+    }
+});
+
+formulario.inputNombre.addEventListener("keyup", (e) => {
+    let inputValue = e.target.value;
+    formulario.inputNombre.value = inputValue;
+    nombre.textContent = inputValue;
+
+    if (inputValue == ""){
+        nombre.textContent = "JHON DOE";
+
+    }
+});
+
+formulario.selectMes.addEventListener("change", (e) => {
+    mesExpiración.textContent = e.target.value;
+    });
+
+formulario.selectYear.addEventListener("change", (e) => {
+        añoExpiración.textContent = e.target.value;
+        });
+
+
+
+
+        
 //FUNCION QUE REALIZA TODO LO RELACIONADO CON LA VALIDACIÓN Y MASKIFY DE LA TARJETA (llama a validator.js)
 btnValidate.onclick = function(){
 

@@ -194,7 +194,7 @@ div > label{
     font-size: 14px;
     font-weight:normal;
     transition: all .5s ease;
-    text-transform: uppercase;
+    
 }
 
 .card-validation input[type="button"]{
@@ -214,7 +214,7 @@ div > label{
 
 .card-validation input[id="inputCCV"]{
     outline: none;
-    width: 10%;
+    width: 20%;
     padding: 10px 5px;
     margin: 0 0 0 30px;
     background: rgba(175, 124, 124, 0.5);
@@ -264,8 +264,6 @@ div > span {
     color: darkmagenta;   
 }
 
-
-
 /*ESTILOS DIBUJO TARJETA*/
 
 .tarjeta {
@@ -277,7 +275,8 @@ div > span {
 	transform: rotateY(0deg);
 	transform-style: preserve-3d;
 	cursor: pointer;
-	z-index: 2;
+    z-index: 2;
+    text-transform: uppercase;
 }
 
 .tarjeta.active {
@@ -331,8 +330,7 @@ div > span {
 .delantera .grupo .nombre,
 .delantera .grupo .expiracion {
 	color: #fff;
-	font-size: 15px;
-	text-transform: uppercase;
+	font-size: 15px;s
 }
 
 .delantera .flexbox {
@@ -406,12 +404,14 @@ div > span {
 
 .trasera .leyenda {
 	font-size: 10px;
-	line-height: 26px;
+    line-height: 23px;
+    text-transform: lowercase;
 }
 
 .trasera .link-banco {
 	font-size: 16px;
-	color: #fff;
+    color: #fff;
+    text-transform: lowercase;
 }
 
 /*ESTILOS FOOTER*/
