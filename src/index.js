@@ -7,7 +7,7 @@ const card = document.querySelector('#tarjeta');
 const formulario = document.querySelector("#formulario-tarjeta");
 const yearActual = new Date().getFullYear();
 let numeroTarjeta = document.querySelector('#tarjeta .numero');
-let nombreTarjeta = document.querySelector('#tarjeta .nombre');
+let nombre = document.querySelector('#tarjeta .nombre');
 let mesExpiración = document.querySelector("#tarjeta .mes");
 let añoExpiración = document.querySelector("#tarjeta .year");
 let ccv = document.querySelector('#tarjeta .ccv');
@@ -92,8 +92,8 @@ formulario.selectYear.addEventListener("change", (e) => {
 
 // * CCV
 formulario.inputCCV.addEventListener('keyup', () => {
-	if(!tarjeta.classList.contains('active')){
-		tarjeta.classList.toggle('active');
+	if(!card.classList.contains('active')){
+		card.classList.toggle('active');
 	}
 
 	formulario.inputCCV.value = formulario.inputCCV.value
