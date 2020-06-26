@@ -165,11 +165,15 @@ Ver
   2. Explicar cómo el producto soluciona los problemas/necesidades de dichos
     usuarios.
 
-  RTA// 
+  RTA// Bueno nuestro producto soluciona estos inconvenientes, porque si la tarjeta es valida permite continuar con el proceso de compra, por el contrario no permite que continue, y le pide al usuario validar su información.
 
   
   3. Luego colocarás la foto de tu primer prototipo en papel.
+  RTA// https://trello.com/c/iKu7aJTK/1-definir-sketch
+
   4. Agregar un resumen del feedback recibido indicando las mejoras a realizar.
+  RTA// dentro de nuestro primer feedback, nos indicaron que nos faltaba algunas de las funcionalidades de compra, como la información del comprador.
+
   5. Imagen del prototipo final.
 
 #### Visualmente (HTML y CSS)
