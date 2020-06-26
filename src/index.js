@@ -21,7 +21,7 @@ document.getElementById("dateCard").style.display ="none";
 document.getElementById("invalid").style.display ="none";
 
 
-//TOMA TODAS LAS CLASES DE LOS BOTONE COMPRA Y EJECUTA UNA FUNCION
+//TOMA TODAS LAS CLASES DE LOS BOTONES COMPRA Y EJECUTA UNA FUNCION
 for ( let i=0; i < btnBuy.length; i++){
        
     btnBuy[i].addEventListener("click", flip);

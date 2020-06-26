@@ -47,44 +47,44 @@ Reflexiona y luego marca los objetivos que has llegado a **entender** y
 
 ### UX
 
-* [ ] Diseñar la aplicación pensando y entendiendo al usuario
-* [ ] Crear prototipos para obtener feedback e iterar
-* [ ] Aplicar los principios de diseño visual
+* [X] Diseñar la aplicación pensando y entendiendo al usuario
+* [X] Crear prototipos para obtener feedback e iterar
+* [X] Aplicar los principios de diseño visual
 
 ### HTML y CSS
 
-* [ ] Uso correcto de HTML semántico
-* [ ] Uso de selectores de CSS
-* [ ] Construir tu aplicación respetando el diseño realizado (maquetación).
+* [X] Uso correcto de HTML semántico
+* [X] Uso de selectores de CSS
+* [X] Construir tu aplicación respetando el diseño realizado (maquetación).
 
 ### DOM
 
-* [ ] Uso de selectores de nodos del DOM
-* [ ] Manejo de eventos del DOM
+* [X] Uso de selectores de nodos del DOM
+* [X] Manejo de eventos del DOM
 * [ ] Manipulación dinámica del DOM
 
 ### Javascript
 
-* [ ] Manipulación de strings
-* [ ] Uso de condicionales
-* [ ] Uso de bucles
-* [ ] Uso de funciones
+* [X] Manipulación de strings
+* [X] Uso de condicionales
+* [X] Uso de bucles
+* [X] Uso de funciones
 * [ ] Datos atómicos y estructurados
-* [ ] Utilizar ES Modules (`import` | `export`).
+* [X] Utilizar ES Modules (`import` | `export`).
 
 ### Testing
 
-* [ ] [Testeo de tus funciones](https://jestjs.io/docs/es-ES/getting-started)
+* [X] [Testeo de tus funciones](https://jestjs.io/docs/es-ES/getting-started)
 
 ### Git y GitHub
 
-* [ ] Comandos de git (`add` | `commit` | `pull` | `status` | `push`).
-* [ ] Manejo de repositorios de GitHub (`clone` | `fork` | `gh-pages`).
+* [X] Comandos de git (`add` | `commit` | `pull` | `status` | `push`).
+* [X] Manejo de repositorios de GitHub (`clone` | `fork` | `gh-pages`).
 
 ### Buenas prácticas de desarrollo
 
-* [ ] Organizar y dividir el código en módulos (Modularización).
-* [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica).
+* [X] Organizar y dividir el código en módulos (Modularización).
+* [X] Uso de identificadores descriptivos (Nomenclatura | Semántica).
 * [ ] Uso de linter para seguir buenas prácticas (ESLINT).
 
 ## 4. Consideraciones generales
@@ -105,8 +105,14 @@ En el `README.md`, cuéntanos cómo pensaste en los usuarios y cuál fue tu proc
 para definir el producto final a nivel de experiencia y de interfaz.
 
 * Quiénes son los principales usuarios de producto.
+RTA// Nuestros principales usuarios son los ecommerce o tiendas que venden por internet.
+
 * Cuáles son los objetivos de estos usuarios en relación con tu producto.
+RTA// Permitir validar la tarjeta de credito, antes de efectuar la compra, para asegurar una compra legitima sin fraudes.
+
 * Cómo crees que el producto que estás creando está resolviendo sus problemas.
+RTA// Creo que al hacer una validación correcta, da tranquilidad a los comerciantes o vendedores, de que su venta se realizó sin tarjetas fraudulentas.
+
 
 ### Interfaz de usuario (UI)
 
@@ -139,14 +145,29 @@ Estos puntos los presentarás en el `README.md`.
 
 Debe contener lo siguiente:
 
-* Un título con el nombre de tu proyecto.
+* Un título con el nombre de tu proyecto. 
+RTA// El e-commerce lo llamamos Xia Store, y la pasarela de pagos PayGO.
+
 * Un resumen de 1 o 2 líneas de qué se trata tu proyecto.
+RTA// Se trata de un ecommerce de venta de cosmeticos, el cual requiere de una validación de la tarjeta de credito, antes de dejar continuar con el proceso de compra.
+
 * La imagen final de tu proyecto.
+
+Ver 
+
 * Investigación UX:
   1. Explicar quiénes son los usuarios y los objetivos en relación con el
     producto.
+
+  RTA// Los usuarios son los ecommerce y los compradores de ese ecommerce.
+  Los objetivos es dar seguridad a la hora de ingresar una tarjeta, peromitiendo al vendedor tener seguridad de que su venta con tarjeta de Credito, ha sido validada.
+
   2. Explicar cómo el producto soluciona los problemas/necesidades de dichos
     usuarios.
+
+  RTA// 
+
+  
   3. Luego colocarás la foto de tu primer prototipo en papel.
   4. Agregar un resumen del feedback recibido indicando las mejoras a realizar.
   5. Imagen del prototipo final.
